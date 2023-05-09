@@ -1,0 +1,45 @@
+html,body{
+    margin:0;
+    padding:0;
+    font-family: 'Oswald', sans-serif;
+    background-color: #e6e6ff;
+}
+
+input{
+    color:#000066;
+    background:#b3b3ff;
+
+    border: 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+
+    margin-bottom: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  margin: 320px auto;
+}
+
+.container img {
+  width: 300px;
+  margin: 0px auto;
+}
+
+button{
+    color:#000066;
+    background:#6666ff;
+
+    border: 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Oswald', sans-serif;
+}
