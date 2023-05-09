@@ -19,13 +19,19 @@ const shoppingList = document.getElementById("shopping-list");
 
 
 onValue(stuffinDB, function(snapshot){
-    let stuffarray= Object.values(snapshot.val())
+    let stuffarray= Object.entries(snapshot.val()) // reformats the data from snapshot
 
+    clearshoppinglist(shoppingList)
     //console.log(stuffarray)
-    for (let i=0 ; i < stuffarray.length ; i++){
-        let currstuff = stuffarray[i]
+    shoppingList.innerHTML = ""
 
-        insertintoshoppinglist(currstuff)
+    for (let i=0 ; i < stuffarray.length ; i++){
+        let currentItem = itemsArray[i]
+
+        let currentItemID=currentItem[0]
+        let currentItemValue=currentItem[1]
+
+        insertintoshoppinglist(currentItem)
     }
 })
 
@@ -33,8 +39,6 @@ onValue(stuffinDB, function(snapshot){
 addButton.addEventListener("click", function() {
   // Get the value of the input field
   const inputValue = inputField.value;
-  // Log the input value to the console
-  //console.log(inputValue);
 
   push(stuffinDB,inputValue)
 
@@ -51,3 +55,6 @@ function insertintoshoppinglist(inputValue){
     shoppingList.innerHTML += `<li>${inputValue}</li>`
 }
 
+function clearshoppinglist(shoppingList){
+    shoppingList.innerHTML = ""
+}
