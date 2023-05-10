@@ -19,19 +19,24 @@ const shoppingList = document.getElementById("shopping-list");
 
 
 onValue(stuffinDB, function(snapshot){
-    let stuffarray= Object.entries(snapshot.val()) // reformats the data from snapshot
 
-    clearshoppinglist(shoppingList)
-    //console.log(stuffarray)
-    shoppingList.innerHTML = ""
+    if(snapshot.exists()){
+        let stuffarray= Object.entries(snapshot.val()) // reformats the data from snapshot
+        clearshoppinglist(shoppingList)
+        //console.log(stuffarray)
+        shoppingList.innerHTML = ""
 
-    for (let i=0 ; i < stuffarray.length ; i++){
-        let currentItem = stuffarray[i]
+        for (let i=0 ; i < stuffarray.length ; i++){
+            let currentItem = stuffarray[i]
 
-        let currentItemID=currentItem[0]
-        let currentItemValue=currentItem[1]
+            let currentItemID=currentItem[0]
+            let currentItemValue=currentItem[1]
 
-        insertintoshoppinglist(currentItem)
+            insertintoshoppinglist(currentItem)
+        }
+    }
+    else {
+        shoppingList.innerHTML ='No items here... yet'
     }
 })
 
