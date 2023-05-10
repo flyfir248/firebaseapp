@@ -1,67 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <title>Add-to-Cart App</title>
-
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='res/favicon.png') }}">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="static/res/favicon.png">
     <link rel="stylesheet" type="text/css" href="index.css">
 
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 100vh;
-        }
-        .header-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 50px;
-        }
-        .header-image img {
-            max-width: 80%;
-            height: auto;
-        }
-        form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-top: 50px;
-            margin-bottom: 50px;
-        }
-        label {
-            margin-bottom: 20px;
-        }
-        input[type=text] {
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 5px;
-            border: none;
-            box-shadow: 0px 0px 5px #ccc;
-        }
-        button[type=submit] {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            border: none;
-            background-color: #007bff;
-            color: #fff;
-            cursor: pointer;
-            box-shadow: 0px 0px 5px #007bff;
-            transition: all 0.2s ease-in-out;
-        }
-        button[type=submit]:hover {
-            background-color: #fff;
-            color: #007bff;
-            box-shadow: 0px 0px 10px #007bff;
-        }
+
         footer {
             background-color: #262626;
             color: #fff;
@@ -107,13 +55,20 @@
 <body>
 	<!-- HTML content here -->
     <div class="container">
-        <img src="res/icon.png">
+        <a href="https://pythonpythonme.netlify.app/index.html">
+            <img src="https://pythonpythonme.netlify.app/PythonPythonME.png">
+        </a>
         <input type="text" id="input-field" placeholder="bread">
         <button id="add-button">Add to cart</button>
+
+       <ul id ='shopping-list'>
+            <li>Oranges</li>
+            <li>Tea</li>
+        </ul>
+
     </div>
     <script src="functions.js" type="module"></script>
     <script src="index.js" type="module"></script>
-
     <p></p>
     <p></p>
     <p></p>
@@ -126,10 +81,10 @@
             <div class="col-md-4 text-center">
                 <h4>Follow Me</h4>
                 <ul class="social-icons">
-                    <a href="https://www.linkedin.com/in/anoop-johny-30a746181/"><img src="{{ url_for('static', filename='res/linkedin.png') }}" alt="LinkedIn"></a>
-                    <a href="https://github.com/flyfir248"><img src="{{ url_for('static', filename='res/github.png') }}" alt="GitHub"></a>
-                    <a href="https://pythonpythonme.netlify.app/index.html"><img src="{{ url_for('static', filename='res/web.png') }}" alt="Website"></a>
-                    <a href="https://medium.com/@anoopjohny2000"><img src="{{ url_for('static', filename='res/medium.png') }}" alt="Medium"></a>
+                    <a href="https://www.linkedin.com/in/anoop-johny-30a746181/"><img src="static/res/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/flyfir248"><img src="static/res/github.png" alt="GitHub"></a>
+                    <a href="https://pythonpythonme.netlify.app/index.html"><img src="static/res/myweb.png" alt="Website"></a>
+                    <a href="https://medium.com/@anoopjohny2000"><img src="static/res/medium.png" alt="Medium"></a>
                 </ul>
             </div>
         </div>

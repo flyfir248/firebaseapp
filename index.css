@@ -3,10 +3,12 @@ html,body{
     padding:0;
     font-family: 'Oswald', sans-serif;
     background-color: #e6e6ff;
+    user-select: none;
 }
 
+
 input{
-    color:#000066;
+    color:#19191a;
     background:#b3b3ff;
 
     border: 0;
@@ -15,7 +17,6 @@ input{
     font-size: 20px;
     text-align: center;
     font-family: 'Oswald', sans-serif;
-
     margin-bottom: 10px;
 }
 
@@ -32,7 +33,7 @@ input{
 }
 
 button{
-    color:#000066;
+    color:#19191a;
     background:#6666ff;
 
     border: 0;
@@ -43,3 +44,38 @@ button{
     margin-bottom: 10px;
     font-family: 'Oswald', sans-serif;
 }
+
+button:hover{
+    background-color: #664fe3;
+    cursor: pointer;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+ul li {
+    font-size: 20;
+    background:#b3b3ff;
+    padding: 15px;
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    text-align: center;
+    flex-grow: 1px;
+    text-align: center;
+}
+
+ul li:hover{
+    background-color: #664fe3;
+    cursor: pointer;
+}
+
+img {
+    width : 150px;
+    margin : 0 auto;
+}
+
