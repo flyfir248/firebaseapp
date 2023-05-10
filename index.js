@@ -70,7 +70,6 @@ function insertintoshoppinglist(item){
 
     })
 
-
     shoppingList.append(newEl)
 
 }
