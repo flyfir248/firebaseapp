@@ -1,7 +1,7 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
 
-import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
 
 const appSettings={
@@ -26,7 +26,7 @@ onValue(stuffinDB, function(snapshot){
     shoppingList.innerHTML = ""
 
     for (let i=0 ; i < stuffarray.length ; i++){
-        let currentItem = itemsArray[i]
+        let currentItem = stuffarray[i]
 
         let currentItemID=currentItem[0]
         let currentItemValue=currentItem[1]
@@ -47,12 +47,31 @@ addButton.addEventListener("click", function() {
   insertintoshoppinglist(inputValue) // calls func which insertsinto list
 });
 
-function clearinputField(){
-    inputField.value= ""
+
+function insertintoshoppinglist(item){
+    //shoppingList.innerHTML += `<li>${inputValue}</li>`
+    let itemID = item[0]
+    let itemValue = item[1]
+
+    let newEl = document.createElement("li")
+
+    newEl.textContent = itemValue // input value of
+
+    newEl.addEventListener("click", function(){
+        //console.log()
+
+        let exactLocationOfItemInDB = ref(database, `stuff/${itemID}`)
+        remove(exactLocationOfItemInDB) // reves item with the ref to id
+
+    })
+
+
+    shoppingList.append(newEl)
+
 }
 
-function insertintoshoppinglist(inputValue){
-    shoppingList.innerHTML += `<li>${inputValue}</li>`
+function clearinputField(){
+    inputField.value= ""
 }
 
 function clearshoppinglist(shoppingList){
