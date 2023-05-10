@@ -1,0 +1,11 @@
+{
+  "name": "StuffList",
+  "short_name" :"StuffList",
+  "icons": [
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "res/webmanifest.png" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "res/webmanifest.png" }
+  ],
+  "theme_color":"#2828e0",
+  "background_color":"#2828e0",
+  "display":"standalone"
+}
